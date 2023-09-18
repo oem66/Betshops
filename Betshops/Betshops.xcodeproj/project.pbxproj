@@ -20,6 +20,11 @@
 		3E2C0F4E2AB838D400810422 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F4D2AB838D400810422 /* RequestError.swift */; };
 		3E2C0F512AB838FC00810422 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F502AB838FC00810422 /* URLComponents.swift */; };
 		3E2C0F532AB83AFB00810422 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F522AB83AFB00810422 /* MapViewModel.swift */; };
+		3E2C0F592AB88E2800810422 /* BetshopEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F582AB88E2800810422 /* BetshopEndpoint.swift */; };
+		3E2C0F5C2AB88FAD00810422 /* BetshopRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F5B2AB88FAD00810422 /* BetshopRequestModel.swift */; };
+		3E2C0F5E2AB8928B00810422 /* BetshopResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F5D2AB8928B00810422 /* BetshopResponseModel.swift */; };
+		3E2C0F602AB8935100810422 /* BetshopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F5F2AB8935100810422 /* BetshopService.swift */; };
+		3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		3E2C0F502AB838FC00810422 /* URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
 		3E2C0F522AB83AFB00810422 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		3E2C0F542AB83E2C00810422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E2C0F582AB88E2800810422 /* BetshopEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopEndpoint.swift; sourceTree = "<group>"; };
+		3E2C0F5B2AB88FAD00810422 /* BetshopRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopRequestModel.swift; sourceTree = "<group>"; };
+		3E2C0F5D2AB8928B00810422 /* BetshopResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopResponseModel.swift; sourceTree = "<group>"; };
+		3E2C0F5F2AB8935100810422 /* BetshopService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopService.swift; sourceTree = "<group>"; };
+		3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,7 @@
 		3E2C0F3E2AB836B100810422 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E2C0F5A2AB88FA300810422 /* Betshop */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3E2C0F432AB837CB00810422 /* MapView.swift */,
+				3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				3E2C0F462AB8386B00810422 /* Base */,
+				3E2C0F562AB88B9200810422 /* Endpoint */,
+				3E2C0F552AB88B3B00810422 /* Service */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -211,6 +225,39 @@
 				3E2C0F502AB838FC00810422 /* URLComponents.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3E2C0F552AB88B3B00810422 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F5F2AB8935100810422 /* BetshopService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3E2C0F562AB88B9200810422 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F572AB88CC400810422 /* Betshop */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		3E2C0F572AB88CC400810422 /* Betshop */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F582AB88E2800810422 /* BetshopEndpoint.swift */,
+			);
+			path = Betshop;
+			sourceTree = "<group>";
+		};
+		3E2C0F5A2AB88FA300810422 /* Betshop */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F5B2AB88FAD00810422 /* BetshopRequestModel.swift */,
+				3E2C0F5D2AB8928B00810422 /* BetshopResponseModel.swift */,
+			);
+			path = Betshop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2C0F5E2AB8928B00810422 /* BetshopResponseModel.swift in Sources */,
+				3E2C0F602AB8935100810422 /* BetshopService.swift in Sources */,
 				3E2C0F512AB838FC00810422 /* URLComponents.swift in Sources */,
 				3E2C0F132AB835A800810422 /* BetshopsApp.swift in Sources */,
 				3E2C0F482AB8387800810422 /* Endpoint.swift in Sources */,
@@ -350,7 +399,10 @@
 				3E2C0F4A2AB838B000810422 /* HTTPClient.swift in Sources */,
 				3E2C0F4C2AB838C100810422 /* HTTPMethod.swift in Sources */,
 				3E2C0F442AB837CB00810422 /* MapView.swift in Sources */,
+				3E2C0F592AB88E2800810422 /* BetshopEndpoint.swift in Sources */,
+				3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */,
 				3E2C0F532AB83AFB00810422 /* MapViewModel.swift in Sources */,
+				3E2C0F5C2AB88FAD00810422 /* BetshopRequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

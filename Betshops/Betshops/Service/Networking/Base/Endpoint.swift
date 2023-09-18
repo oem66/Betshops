@@ -16,3 +16,9 @@ protocol Endpoint {
     var parameters: [String: String]? { get }
     var body: [String: Any]? { get }
 }
+
+extension Endpoint {
+    var scheme: String {
+        return "https"
+    }
+}

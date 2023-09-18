@@ -14,8 +14,16 @@ struct MapView: View {
     
     var body: some View {
         GeometryReader { proxy in
-            Map(coordinateRegion: $viewModel.region, showsUserLocation: true, userTrackingMode: .none)
-                .ignoresSafeArea(.all)
+            Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: viewModel.betshops) { betshop in
+                MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: betshop.location.lat, longitude: betshop.location.lng)) {
+                    BetshopPinView(viewModel: viewModel, betshop: betshop)
+                }
+            }
+            .ignoresSafeArea(.all)
+        }
+        .onAppear {
+            viewModel.setupLocationServices()
+            viewModel.getBetshops()
         }
     }
 }

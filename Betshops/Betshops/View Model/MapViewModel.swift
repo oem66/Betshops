@@ -12,13 +12,43 @@ import Combine
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.137154, longitude: 11.576124), latitudinalMeters: 200, longitudinalMeters: 200)
+    @Published var betshops = [BetshopModel]()
+    @Published var selectedBetshop: BetshopModel? = nil
+    
+    private let service: BetshopServiceProtocol
     var locationManager = CLLocationManager()
     
-    override init() {
-        super.init()
-        setupLocationServices()
+    init(service: BetshopServiceProtocol = BetshopService()) {
+        self.service = service
     }
     
+    // MARK: - Networking
+    func getBetshops() {
+        Task(priority: .background) {
+            let model = BetshopRequestModel(boundingBox: "48.16124,11.60912,48.12229,11.52741")
+            let result = await service.getBetshops(model: model)
+            switch result {
+            case .success(let success):
+                populateBetshops(success)
+            case .failure(let failure):
+                debugPrint(failure.localizedDescription)
+            }
+        }
+    }
+    
+    private func populateBetshops(_ data: BetshopResponseModel) {
+        DispatchQueue.main.async {
+            self.betshops = data.betshops
+        }
+    }
+    
+    func setSelectedBetshop(_ betshop: BetshopModel) {
+        DispatchQueue.main.async {
+            self.selectedBetshop = betshop
+        }
+    }
+    
+    // MARK: - Location Services
     func setupLocationServices() {
         Task(priority: .background) {
             if CLLocationManager.locationServicesEnabled() {
