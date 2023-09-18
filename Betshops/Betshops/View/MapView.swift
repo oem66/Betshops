@@ -16,12 +16,7 @@ struct MapView: View {
         GeometryReader { proxy in
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: viewModel.betshops) { betshop in
                 MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: betshop.location.lat, longitude: betshop.location.lng)) {
-                    ZStack {
-                        Image(systemName: "mappin")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                            .foregroundColor(.black)
-                    }
+                    BetshopPinView(viewModel: viewModel, betshop: betshop)
                 }
             }
             .ignoresSafeArea(.all)

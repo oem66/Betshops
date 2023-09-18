@@ -13,6 +13,7 @@ import Combine
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.137154, longitude: 11.576124), latitudinalMeters: 200, longitudinalMeters: 200)
     @Published var betshops = [BetshopModel]()
+    @Published var selectedBetshop: BetshopModel? = nil
     
     private let service: BetshopServiceProtocol
     var locationManager = CLLocationManager()
@@ -28,7 +29,6 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
             let result = await service.getBetshops(model: model)
             switch result {
             case .success(let success):
-                debugPrint("Betshops: \(success)")
                 populateBetshops(success)
             case .failure(let failure):
                 debugPrint(failure.localizedDescription)
@@ -39,6 +39,12 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     private func populateBetshops(_ data: BetshopResponseModel) {
         DispatchQueue.main.async {
             self.betshops = data.betshops
+        }
+    }
+    
+    func setSelectedBetshop(_ betshop: BetshopModel) {
+        DispatchQueue.main.async {
+            self.selectedBetshop = betshop
         }
     }
     
