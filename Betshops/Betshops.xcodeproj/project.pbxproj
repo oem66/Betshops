@@ -95,9 +95,11 @@
 		3E2C0F112AB835A800810422 /* Betshops */ = {
 			isa = PBXGroup;
 			children = (
-				3E2C0F122AB835A800810422 /* BetshopsApp.swift */,
-				3E2C0F142AB835A800810422 /* ContentView.swift */,
-				3E2C0F162AB835A800810422 /* Assets.xcassets */,
+				3E2C0F3D2AB836AC00810422 /* Application */,
+				3E2C0F3E2AB836B100810422 /* Model */,
+				3E2C0F412AB836C100810422 /* View */,
+				3E2C0F402AB836BA00810422 /* View Model */,
+				3E2C0F3F2AB836B600810422 /* Service */,
 				3E2C0F182AB835A800810422 /* Betshops.entitlements */,
 				3E2C0F192AB835A800810422 /* Preview Content */,
 			);
@@ -127,6 +129,52 @@
 				3E2C0F302AB835A800810422 /* BetshopsUITestsLaunchTests.swift */,
 			);
 			path = BetshopsUITests;
+			sourceTree = "<group>";
+		};
+		3E2C0F3D2AB836AC00810422 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F162AB835A800810422 /* Assets.xcassets */,
+				3E2C0F122AB835A800810422 /* BetshopsApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3E2C0F3E2AB836B100810422 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E2C0F3F2AB836B600810422 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F422AB836EB00810422 /* Networking */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3E2C0F402AB836BA00810422 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		3E2C0F412AB836C100810422 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E2C0F142AB835A800810422 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E2C0F422AB836EB00810422 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
