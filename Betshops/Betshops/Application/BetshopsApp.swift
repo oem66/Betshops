@@ -11,7 +11,7 @@ import SwiftUI
 struct BetshopsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MapView()
         }
     }
 }
