@@ -10,8 +10,8 @@ import SwiftUI
 
 struct BetshopPinView: View {
     @ObservedObject var viewModel: MapViewModel
-    var betshop: BetshopModel
     @State private var betshop_tapped = false
+    var betshop: BetshopModel
     
     var body: some View {
         ZStack {
@@ -30,6 +30,7 @@ struct BetshopPinView: View {
         }
         .onTapGesture {
             betshop_tapped.toggle()
+            viewModel.showBetshopPreview = true
             viewModel.setSelectedBetshop(betshop)
         }
     }

@@ -11,9 +11,11 @@ import MapKit
 import Combine
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+//latitude: 48.137154, longitude: 11.576124
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.137154, longitude: 11.576124), latitudinalMeters: 200, longitudinalMeters: 200)
     @Published var betshops = [BetshopModel]()
-    @Published var selectedBetshop: BetshopModel? = nil
+    @Published var selectedBetshop = BetshopModel()
+    @Published var showBetshopPreview = false
     
     private let service: BetshopServiceProtocol
     var locationManager = CLLocationManager()
