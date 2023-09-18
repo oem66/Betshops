@@ -17,5 +17,9 @@ struct MapView: View {
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, userTrackingMode: .none)
                 .ignoresSafeArea(.all)
         }
+        .onAppear {
+            viewModel.setupLocationServices()
+            viewModel.getBetshops()
+        }
     }
 }
