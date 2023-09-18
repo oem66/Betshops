@@ -12,17 +12,18 @@ struct BetshopResponseModel: Codable, Hashable {
     var betshops: [BetshopModel]
 }
 
-struct BetshopModel: Codable, Hashable {
+struct BetshopModel: Codable, Hashable, Identifiable {
+    let id = UUID()
     var name: String
     var location: BetshopLocation
-    var id: Int
+//    var id: Int
     var county: String
-    var city_id: String
+//    var city_id: String
     var city: String
     var address: String
 }
 
 struct BetshopLocation: Codable, Hashable {
-    var lng: Decimal
-    var lat: Decimal
+    var lng: Double
+    var lat: Double
 }
