@@ -47,7 +47,7 @@ struct BetshopPreviewView: View {
                         .lineLimit(1)
                 }
                 
-                HStack {
+                HStack(spacing: 10) {
                     Button {
                         debugPrint("Open Now tapped!")
                     } label: {
@@ -57,6 +57,8 @@ struct BetshopPreviewView: View {
                             .foregroundColor(Color(red: 140/255, green: 187/255, blue: 21/255))
                     }
                     .padding(.trailing, 20)
+                    
+                    Divider().frame(width: 3, height: 45)
                     
                     Button {
                         debugPrint("Route tapped!")
