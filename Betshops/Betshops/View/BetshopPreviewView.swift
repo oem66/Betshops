@@ -37,9 +37,10 @@ struct BetshopPreviewView: View {
                 }
                 
                 HStack {
-                    Image("phone")
+                    Image(systemName: "house.fill")
                         .resizable()
-                        .frame(width: 20, height: 30)
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color(red: 140/255, green: 187/255, blue: 21/255))
                     Text((betshop.city ?? "Unknown") + ", " + (betshop.county ?? ""))
                         .font(.custom("Avenir-Medium", size: 20))
                         .foregroundColor(.black)
@@ -53,7 +54,7 @@ struct BetshopPreviewView: View {
                         Text("Open now")
                             .font(.custom("Avenir-Medium", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.green)
+                            .foregroundColor(Color(red: 140/255, green: 187/255, blue: 21/255))
                     }
                     .padding(.trailing, 20)
                     
@@ -63,7 +64,7 @@ struct BetshopPreviewView: View {
                         Text("Route")
                             .font(.custom("Avenir-Medium", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.blue)
+                            .foregroundColor(Color(red: 21/255, green: 46/255, blue: 128/255))
                     }
                 }
                 .padding(.top, 20)
