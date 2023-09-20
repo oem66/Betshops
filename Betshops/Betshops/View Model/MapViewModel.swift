@@ -39,7 +39,8 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     }
     
     private func populateBetshops(_ data: BetshopResponseModel) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.betshops = data.betshops
         }
     }
@@ -48,6 +49,29 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         DispatchQueue.main.async {
             self.selectedBetshop = betshop
         }
+    }
+    
+    func checkOpenHours() -> Bool {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: currentDate)
+        
+        if 8...16 ~= hour {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func navigateToCoordinates(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let destinationPlacemark = MKPlacemark(coordinate: coordinate)
+        
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        destinationMapItem.name = "Destination"
+        
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        destinationMapItem.openInMaps(launchOptions: launchOptions)
     }
     
     // MARK: - Location Services
