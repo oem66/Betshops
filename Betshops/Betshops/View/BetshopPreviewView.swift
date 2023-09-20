@@ -62,6 +62,7 @@ struct BetshopPreviewView: View {
                     
                     Button {
                         debugPrint("Route tapped!")
+                        viewModel.navigateToCoordinates(latitude: betshop.location?.lat ?? 48.137154, longitude: betshop.location?.lng ?? 11.576124)
                     } label: {
                         Text("Route")
                             .font(.custom("Avenir-Medium", size: 20))

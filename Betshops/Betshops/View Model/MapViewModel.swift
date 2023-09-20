@@ -62,6 +62,17 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
     }
     
+    func navigateToCoordinates(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let destinationPlacemark = MKPlacemark(coordinate: coordinate)
+        
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        destinationMapItem.name = "Destination"
+        
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        destinationMapItem.openInMaps(launchOptions: launchOptions)
+    }
+    
     // MARK: - Location Services
     func setupLocationServices() {
         Task(priority: .background) {
