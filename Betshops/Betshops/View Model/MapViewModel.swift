@@ -39,7 +39,8 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     }
     
     private func populateBetshops(_ data: BetshopResponseModel) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.betshops = data.betshops
         }
     }
