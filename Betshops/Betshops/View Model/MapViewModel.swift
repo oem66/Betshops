@@ -50,6 +50,18 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
     }
     
+    func checkOpenHours() -> Bool {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: currentDate)
+        
+        if 8...16 ~= hour {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     // MARK: - Location Services
     func setupLocationServices() {
         Task(priority: .background) {
