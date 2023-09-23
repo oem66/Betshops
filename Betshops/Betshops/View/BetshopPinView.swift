@@ -29,8 +29,10 @@ struct BetshopPinView: View {
             
         }
         .onTapGesture {
-            betshop_tapped.toggle()
-            viewModel.showBetshopPreview = true
+            withAnimation {
+                betshop_tapped.toggle()
+                viewModel.showBetshopPreview = true
+            }
             viewModel.setSelectedBetshop(betshop)
         }
     }

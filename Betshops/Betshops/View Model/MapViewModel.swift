@@ -11,14 +11,14 @@ import MapKit
 import Combine
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
-//latitude: 48.137154, longitude: 11.576124
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.137154, longitude: 11.576124), latitudinalMeters: 200, longitudinalMeters: 200)
     @Published var betshops = [BetshopModel]()
     @Published var selectedBetshop = BetshopModel()
     @Published var showBetshopPreview = false
+    @Published var showNetworkAlert = false
     
     private let service: BetshopServiceProtocol
-    var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     init(service: BetshopServiceProtocol = BetshopService()) {
         self.service = service
@@ -72,6 +72,14 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         destinationMapItem.openInMaps(launchOptions: launchOptions)
+    }
+    
+    func openSettings() {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        
+        UIApplication.shared.open(settingsURL)
     }
     
     // MARK: - Location Services

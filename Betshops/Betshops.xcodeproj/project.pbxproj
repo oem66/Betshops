@@ -26,6 +26,7 @@
 		3E2C0F602AB8935100810422 /* BetshopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F5F2AB8935100810422 /* BetshopService.swift */; };
 		3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */; };
 		3E2C0F642AB8BBC700810422 /* BetshopPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F632AB8BBC700810422 /* BetshopPreviewView.swift */; };
+		3E436B592ABF6CC700B00BFA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		3E2C0F5F2AB8935100810422 /* BetshopService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopService.swift; sourceTree = "<group>"; };
 		3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPinView.swift; sourceTree = "<group>"; };
 		3E2C0F632AB8BBC700810422 /* BetshopPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPreviewView.swift; sourceTree = "<group>"; };
+		3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				3E2C0F5F2AB8935100810422 /* BetshopService.swift */,
+				3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				3E2C0F132AB835A800810422 /* BetshopsApp.swift in Sources */,
 				3E2C0F482AB8387800810422 /* Endpoint.swift in Sources */,
 				3E2C0F4E2AB838D400810422 /* RequestError.swift in Sources */,
+				3E436B592ABF6CC700B00BFA /* NetworkMonitor.swift in Sources */,
 				3E2C0F4A2AB838B000810422 /* HTTPClient.swift in Sources */,
 				3E2C0F4C2AB838C100810422 /* HTTPMethod.swift in Sources */,
 				3E2C0F442AB837CB00810422 /* MapView.swift in Sources */,

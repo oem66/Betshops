@@ -27,8 +27,9 @@ struct BetshopPreviewView: View {
                     Spacer()
                     
                     Button {
-                        debugPrint("Close tapped!")
-                        viewModel.showBetshopPreview = false
+                        withAnimation {
+                            viewModel.showBetshopPreview = false
+                        }
                     } label: {
                         Image("close")
                             .resizable()
@@ -61,7 +62,6 @@ struct BetshopPreviewView: View {
                     Divider().frame(width: 3, height: 45)
                     
                     Button {
-                        debugPrint("Route tapped!")
                         viewModel.navigateToCoordinates(latitude: betshop.location?.lat ?? 48.137154, longitude: betshop.location?.lng ?? 11.576124)
                     } label: {
                         Text("Route")
