@@ -11,6 +11,7 @@ import Combine
 
 struct MapView: View {
     @StateObject private var viewModel = MapViewModel()
+    @StateObject private var networkMonitor = NetworkMonitor()
     
     var body: some View {
         GeometryReader { proxy in
@@ -30,7 +31,29 @@ struct MapView: View {
         }
         .onAppear {
             viewModel.setupLocationServices()
-            viewModel.getBetshops()
+            if networkMonitor.isConnected {
+                viewModel.getBetshops()
+            } else {
+                viewModel.showNetworkAlert.toggle()
+            }
+        }
+        .onDisappear {
+            networkMonitor.stop()
+        }
+        .onChange(of: networkMonitor.isConnected) { newIsConnected in
+            if newIsConnected {
+                viewModel.getBetshops()
+            }
+        }
+        .alert(isPresented: $viewModel.showNetworkAlert) {
+            Alert(
+                title: Text("No Internet Connection"),
+                message: Text("Please connect to a network to download betshop locations."),
+                primaryButton: .default(Text("Open Settings"), action: {
+                    viewModel.openSettings()
+                }),
+                secondaryButton: .cancel()
+            )
         }
     }
 }
