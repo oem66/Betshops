@@ -29,6 +29,7 @@
 		3E436B592ABF6CC700B00BFA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */; };
 		3E436B5C2AC06EE400B00BFA /* AssetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B5B2AC06EE400B00BFA /* AssetNames.swift */; };
 		3E436B5E2AC070E400B00BFA /* ApplicationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B5D2AC070E400B00BFA /* ApplicationConfiguration.swift */; };
+		3E436B612AC0730200B00BFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3E436B602AC0730200B00BFA /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3E436B5B2AC06EE400B00BFA /* AssetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetNames.swift; sourceTree = "<group>"; };
 		3E436B5D2AC070E400B00BFA /* ApplicationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfiguration.swift; sourceTree = "<group>"; };
+		3E436B602AC0730200B00BFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				3E2C0F542AB83E2C00810422 /* Info.plist */,
 				3E2C0F3D2AB836AC00810422 /* Application */,
+				3E436B5F2AC072D500B00BFA /* Localization */,
 				3E2C0F3E2AB836B100810422 /* Model */,
 				3E2C0F412AB836C100810422 /* View */,
 				3E2C0F402AB836BA00810422 /* View Model */,
@@ -280,6 +283,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		3E436B5F2AC072D500B00BFA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				3E436B602AC0730200B00BFA /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +377,8 @@
 			knownRegions = (
 				en,
 				Base,
+				hr,
+				de,
 			);
 			mainGroup = 3E2C0F062AB835A800810422;
 			productRefGroup = 3E2C0F102AB835A800810422 /* Products */;
@@ -386,6 +399,7 @@
 			files = (
 				3E2C0F1B2AB835A800810422 /* Preview Assets.xcassets in Resources */,
 				3E2C0F172AB835A800810422 /* Assets.xcassets in Resources */,
+				3E436B612AC0730200B00BFA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
