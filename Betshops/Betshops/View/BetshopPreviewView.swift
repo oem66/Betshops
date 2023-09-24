@@ -29,6 +29,7 @@ struct BetshopPreviewView: View {
                     Button {
                         withAnimation {
                             viewModel.showBetshopPreview = false
+                            viewModel.selectedBetshop = BetshopModel()
                         }
                     } label: {
                         Image("close")
