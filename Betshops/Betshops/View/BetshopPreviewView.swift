@@ -16,7 +16,7 @@ struct BetshopPreviewView: View {
         VStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Image("green_bubble")
+                    Image(AssetNames.shared.green_bubble)
                         .resizable()
                         .frame(width: 20, height: 30)
                     Text((betshop.address ?? "No Address") + ", " + (betshop.name ?? "Unknown"))
@@ -32,7 +32,7 @@ struct BetshopPreviewView: View {
                             viewModel.selectedBetshop = BetshopModel()
                         }
                     } label: {
-                        Image("close")
+                        Image(AssetNames.shared.close)
                             .resizable()
                             .frame(width: 30, height: 30)
                     }

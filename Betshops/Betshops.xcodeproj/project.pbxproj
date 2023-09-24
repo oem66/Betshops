@@ -27,6 +27,7 @@
 		3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */; };
 		3E2C0F642AB8BBC700810422 /* BetshopPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F632AB8BBC700810422 /* BetshopPreviewView.swift */; };
 		3E436B592ABF6CC700B00BFA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */; };
+		3E436B5C2AC06EE400B00BFA /* AssetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B5B2AC06EE400B00BFA /* AssetNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPinView.swift; sourceTree = "<group>"; };
 		3E2C0F632AB8BBC700810422 /* BetshopPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPreviewView.swift; sourceTree = "<group>"; };
 		3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3E436B5B2AC06EE400B00BFA /* AssetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		3E2C0F3D2AB836AC00810422 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3E436B5A2AC06ECF00B00BFA /* Constants */,
 				3E2C0F4F2AB838E900810422 /* Extension */,
 				3E2C0F162AB835A800810422 /* Assets.xcassets */,
 				3E2C0F122AB835A800810422 /* BetshopsApp.swift */,
@@ -264,6 +267,14 @@
 				3E2C0F5D2AB8928B00810422 /* BetshopResponseModel.swift */,
 			);
 			path = Betshop;
+			sourceTree = "<group>";
+		};
+		3E436B5A2AC06ECF00B00BFA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3E436B5B2AC06EE400B00BFA /* AssetNames.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +422,7 @@
 				3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */,
 				3E2C0F532AB83AFB00810422 /* MapViewModel.swift in Sources */,
 				3E2C0F5C2AB88FAD00810422 /* BetshopRequestModel.swift in Sources */,
+				3E436B5C2AC06EE400B00BFA /* AssetNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
