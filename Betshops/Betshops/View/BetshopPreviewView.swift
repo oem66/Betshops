@@ -20,7 +20,7 @@ struct BetshopPreviewView: View {
                         .resizable()
                         .frame(width: 20, height: 30)
                     Text((betshop.address ?? "No Address") + ", " + (betshop.name ?? "Unknown"))
-                        .font(.custom("Avenir-Medium", size: 20))
+                        .font(.custom(ApplicationConfiguration.shared.main_font, size: 20))
                         .foregroundColor(.black)
                         .lineLimit(3)
                     
@@ -39,12 +39,12 @@ struct BetshopPreviewView: View {
                 }
                 
                 HStack {
-                    Image(systemName: "house.fill")
+                    Image(systemName: AssetNames.shared.house_fill)
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(Color(red: 140/255, green: 187/255, blue: 21/255))
+                        .foregroundColor(ApplicationConfiguration.shared.app_green_color)
                     Text((betshop.city ?? "Unknown") + ", " + (betshop.county ?? ""))
-                        .font(.custom("Avenir-Medium", size: 20))
+                        .font(.custom(ApplicationConfiguration.shared.main_font, size: 20))
                         .foregroundColor(.black)
                         .lineLimit(1)
                 }
@@ -54,7 +54,7 @@ struct BetshopPreviewView: View {
                         debugPrint("Open Now tapped!")
                     } label: {
                         Text(viewModel.checkOpenHours() ? "Open now" : "Closed now")
-                            .font(.custom("Avenir-Medium", size: 20))
+                            .font(.custom(ApplicationConfiguration.shared.main_font, size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(viewModel.checkOpenHours() ? Color(red: 140/255, green: 187/255, blue: 21/255) : .red)
                     }
@@ -66,7 +66,7 @@ struct BetshopPreviewView: View {
                         viewModel.navigateToCoordinates(latitude: betshop.location?.lat ?? 48.137154, longitude: betshop.location?.lng ?? 11.576124)
                     } label: {
                         Text("Route")
-                            .font(.custom("Avenir-Medium", size: 20))
+                            .font(.custom(ApplicationConfiguration.shared.main_font, size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(Color(red: 21/255, green: 46/255, blue: 128/255))
                     }

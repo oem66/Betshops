@@ -16,4 +16,5 @@ final class AssetNames {
     let green_bubble = "green_bubble"
     let green_pin = "green_pin"
     let phone = "phone"
+    let house_fill = "house.fill"
 }
