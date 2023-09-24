@@ -15,18 +15,31 @@ struct BetshopPinView: View {
     
     var body: some View {
         ZStack {
-            if betshop_tapped {
-                Image("green_pin")
-                    .resizable()
-                    .frame(width: 40, height: 50)
-                    .foregroundColor(.black)
+            if viewModel.showBetshopPreview {
+                if betshop.id == viewModel.selectedBetshop.id {
+                    if betshop_tapped {
+                        Image("green_pin")
+                            .resizable()
+                            .frame(width: 40, height: 50)
+                            .foregroundColor(.black)
+                    } else {
+                        Image("blue_pin")
+                            .resizable()
+                            .frame(width: 30, height: 40)
+                            .foregroundColor(.black)
+                    }
+                } else {
+                    Image("blue_pin")
+                        .resizable()
+                        .frame(width: 30, height: 40)
+                        .foregroundColor(.black)
+                }
             } else {
                 Image("blue_pin")
                     .resizable()
                     .frame(width: 30, height: 40)
                     .foregroundColor(.black)
             }
-            
         }
         .onTapGesture {
             withAnimation {
