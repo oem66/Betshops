@@ -27,6 +27,9 @@
 		3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */; };
 		3E2C0F642AB8BBC700810422 /* BetshopPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C0F632AB8BBC700810422 /* BetshopPreviewView.swift */; };
 		3E436B592ABF6CC700B00BFA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */; };
+		3E436B5C2AC06EE400B00BFA /* AssetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B5B2AC06EE400B00BFA /* AssetNames.swift */; };
+		3E436B5E2AC070E400B00BFA /* ApplicationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436B5D2AC070E400B00BFA /* ApplicationConfiguration.swift */; };
+		3E436B612AC0730200B00BFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3E436B602AC0730200B00BFA /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		3E2C0F612AB8AA0000810422 /* BetshopPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPinView.swift; sourceTree = "<group>"; };
 		3E2C0F632AB8BBC700810422 /* BetshopPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetshopPreviewView.swift; sourceTree = "<group>"; };
 		3E436B582ABF6CC700B00BFA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3E436B5B2AC06EE400B00BFA /* AssetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetNames.swift; sourceTree = "<group>"; };
+		3E436B5D2AC070E400B00BFA /* ApplicationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfiguration.swift; sourceTree = "<group>"; };
+		3E436B602AC0730200B00BFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 			children = (
 				3E2C0F542AB83E2C00810422 /* Info.plist */,
 				3E2C0F3D2AB836AC00810422 /* Application */,
+				3E436B5F2AC072D500B00BFA /* Localization */,
 				3E2C0F3E2AB836B100810422 /* Model */,
 				3E2C0F412AB836C100810422 /* View */,
 				3E2C0F402AB836BA00810422 /* View Model */,
@@ -162,6 +169,7 @@
 		3E2C0F3D2AB836AC00810422 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3E436B5A2AC06ECF00B00BFA /* Constants */,
 				3E2C0F4F2AB838E900810422 /* Extension */,
 				3E2C0F162AB835A800810422 /* Assets.xcassets */,
 				3E2C0F122AB835A800810422 /* BetshopsApp.swift */,
@@ -266,6 +274,23 @@
 			path = Betshop;
 			sourceTree = "<group>";
 		};
+		3E436B5A2AC06ECF00B00BFA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3E436B5B2AC06EE400B00BFA /* AssetNames.swift */,
+				3E436B5D2AC070E400B00BFA /* ApplicationConfiguration.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3E436B5F2AC072D500B00BFA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				3E436B602AC0730200B00BFA /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +377,8 @@
 			knownRegions = (
 				en,
 				Base,
+				hr,
+				de,
 			);
 			mainGroup = 3E2C0F062AB835A800810422;
 			productRefGroup = 3E2C0F102AB835A800810422 /* Products */;
@@ -372,6 +399,7 @@
 			files = (
 				3E2C0F1B2AB835A800810422 /* Preview Assets.xcassets in Resources */,
 				3E2C0F172AB835A800810422 /* Assets.xcassets in Resources */,
+				3E436B612AC0730200B00BFA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +432,7 @@
 				3E2C0F482AB8387800810422 /* Endpoint.swift in Sources */,
 				3E2C0F4E2AB838D400810422 /* RequestError.swift in Sources */,
 				3E436B592ABF6CC700B00BFA /* NetworkMonitor.swift in Sources */,
+				3E436B5E2AC070E400B00BFA /* ApplicationConfiguration.swift in Sources */,
 				3E2C0F4A2AB838B000810422 /* HTTPClient.swift in Sources */,
 				3E2C0F4C2AB838C100810422 /* HTTPMethod.swift in Sources */,
 				3E2C0F442AB837CB00810422 /* MapView.swift in Sources */,
@@ -411,6 +440,7 @@
 				3E2C0F622AB8AA0000810422 /* BetshopPinView.swift in Sources */,
 				3E2C0F532AB83AFB00810422 /* MapViewModel.swift in Sources */,
 				3E2C0F5C2AB88FAD00810422 /* BetshopRequestModel.swift in Sources */,
+				3E436B5C2AC06EE400B00BFA /* AssetNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

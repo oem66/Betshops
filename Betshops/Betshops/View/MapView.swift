@@ -47,9 +47,9 @@ struct MapView: View {
         }
         .alert(isPresented: $viewModel.showNetworkAlert) {
             Alert(
-                title: Text("No Internet Connection"),
-                message: Text("Please connect to a network to download betshop locations."),
-                primaryButton: .default(Text("Open Settings"), action: {
+                title: Text(LocalizedStringKey("no_internet")),
+                message: Text(LocalizedStringKey("no_internet_description")),
+                primaryButton: .default(Text(LocalizedStringKey("open_settings")), action: {
                     viewModel.openSettings()
                 }),
                 secondaryButton: .cancel()

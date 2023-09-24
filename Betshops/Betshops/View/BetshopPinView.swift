@@ -18,24 +18,24 @@ struct BetshopPinView: View {
             if viewModel.showBetshopPreview {
                 if betshop.id == viewModel.selectedBetshop.id {
                     if betshop_tapped {
-                        Image("green_pin")
+                        Image(AssetNames.shared.green_pin)
                             .resizable()
                             .frame(width: 40, height: 50)
                             .foregroundColor(.black)
                     } else {
-                        Image("blue_pin")
+                        Image(AssetNames.shared.blue_pin)
                             .resizable()
                             .frame(width: 30, height: 40)
                             .foregroundColor(.black)
                     }
                 } else {
-                    Image("blue_pin")
+                    Image(AssetNames.shared.blue_pin)
                         .resizable()
                         .frame(width: 30, height: 40)
                         .foregroundColor(.black)
                 }
             } else {
-                Image("blue_pin")
+                Image(AssetNames.shared.blue_pin)
                     .resizable()
                     .frame(width: 30, height: 40)
                     .foregroundColor(.black)
